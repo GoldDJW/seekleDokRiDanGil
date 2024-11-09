@@ -9,18 +9,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       min-height: 100vh;
       margin: 0;
       background-color: #f0f0f0;
       font-family: Arial, sans-serif;
     }
     .map-container {
+      position: relative;
       max-width: 800px;
       width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-      text-align: center;
     }
     .map-container img {
       width: 100%;
@@ -28,53 +25,63 @@
       border-radius: 8px;
       border: 1px solid #ccc;
     }
-    .button-group {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-    .button-group .location-button {
-      padding: 10px 15px;
-      font-size: 16px;
+    .location-button {
+      position: absolute;
+      padding: 5px 10px;
+      font-size: 14px;
       color: white;
-      background-color: #4CAF50;
+      background-color: rgba(76, 175, 80, 0.8); /* 반투명 녹색 */
       border: none;
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
     }
-    /* 반응형 웹 */
+    /* 각 위치별 버튼 위치 설정 */
+    .button-central-high {
+      top: 13%; /* 중앙고등학교 위치 */
+      left: 64%;
+    }
+    .button-joseon {
+      top: 42%; /* 조선어학회관터 위치 */
+      left: 20%;
+    }
+    .button-bukchon {
+      top: 45%; /* 북촌문화센터 위치 */
+      left: 50%;
+    }
+    .button-chundo {
+      top: 70%; /* 천도교중앙대교당 위치 */
+      left: 44%;
+    }
+    .button-taehwa {
+      top: 86%; /* 태화관터 위치 */
+      left: 44%;
+    }
+    .button-tapgol {
+      top: 96%; /* 탑골공원 위치 */
+      left: 71%;
+    }
+    /* 반응형 조정 */
     @media (max-width: 600px) {
-      .button-group .location-button {
-        font-size: 14px;
-        padding: 8px 12px;
+      .location-button {
+        font-size: 12px;
+        padding: 4px 8px;
       }
     }
-    #button-school { top: 13%; left: 64%; }
-    #button-joseon { top: 42%; left: 20%; }
-    #button-bukchon { top: 45%; left: 50%; }
-    #button-chundo { top: 70%; left: 44%; }
-    #button-taehwa { top: 86%; left: 44%; }
-    #button-tapgol { top: 96%; left: 71%; }
   </style>
 </head>
 <body>
 
   <div class="map-container">
-    <h1>독리단길 가봤니?</h1>
     <img src="images/독리단길워크북.jpg" alt="독리단길 워크북 이미지">
-    <p>미니맵 내 각 위치로 이동하여 자세한 정보를 확인해보세요!</p>
-
-    <div class="button-group">
-      <a href="central-high.html" class="location-button">중앙고등학교</a>
-      <a href="joseon.html" class="location-button">조선어학회관터</a>
-      <a href="bukchon.html" class="location-button">북촌문화센터</a>
-      <a href="chundo.html" class="location-button">천도교중앙대교당</a>
-      <a href="taehwa.html" class="location-button">태화관터</a>
-      <a href="tapgol.html" class="location-button">탑골공원</a>
-    </div>
+    
+    <!-- 각 위치 버튼 -->
+    <a href="central-high.html" class="location-button button-central-high">중앙고등학교</a>
+    <a href="joseon.html" class="location-button button-joseon">조선어학회관터</a>
+    <a href="bukchon.html" class="location-button button-bukchon">북촌문화센터</a>
+    <a href="chundo.html" class="location-button button-chundo">천도교중앙대교당</a>
+    <a href="taehwa.html" class="location-button button-taehwa">태화관터</a>
+    <a href="tapgol.html" class="location-button button-tapgol">탑골공원</a>
   </div>
 
 </body>
