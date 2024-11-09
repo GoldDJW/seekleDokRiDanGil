@@ -9,18 +9,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       min-height: 100vh;
       margin: 0;
       background-color: #f0f0f0;
       font-family: Arial, sans-serif;
-      flex-direction: column;
-      text-align: center;
     }
     .map-container {
       max-width: 800px;
       width: 100%;
       padding: 10px;
       box-sizing: border-box;
+      text-align: center;
     }
     .map-container img {
       width: 100%;
@@ -28,10 +28,28 @@
       border-radius: 8px;
       border: 1px solid #ccc;
     }
+    .button-group {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .button-group .location-button {
+      padding: 10px 15px;
+      font-size: 16px;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
     /* 반응형 웹 */
     @media (max-width: 600px) {
-      .map-container {
-        padding: 5px;
+      .button-group .location-button {
+        font-size: 14px;
+        padding: 8px 12px;
       }
     }
   </style>
@@ -41,8 +59,18 @@
   <div class="map-container">
     <h1>독리단길 가봤니?</h1>
     <img src="images/독리단길워크북.jpg" alt="독리단길 워크북 이미지">
-    <p>미니맵 내 QR코드를 클릭하여 장소별 정보를 확인해보세요!</p>
+    <p>미니맵 내 각 위치로 이동하여 자세한 정보를 확인해보세요!</p>
+
+    <div class="button-group">
+      <a href="central-high.html" class="location-button">중앙고등학교</a>
+      <a href="joseon.html" class="location-button">조선어학회관터</a>
+      <a href="bukchon.html" class="location-button">북촌문화센터</a>
+      <a href="chundo.html" class="location-button">천도교중앙대교당</a>
+      <a href="taehwa.html" class="location-button">태화관터</a>
+      <a href="tapgol.html" class="location-button">탑골공원</a>
+    </div>
   </div>
 
 </body>
 </html>
+
