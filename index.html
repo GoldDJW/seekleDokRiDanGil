@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>독리단길 가봤니?</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      flex-direction: column;
+      text-align: center;
+    }
+    .map-container {
+      max-width: 800px;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .map-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    /* 반응형 웹 */
+    @media (max-width: 600px) {
+      .map-container {
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="map-container">
+    <h1>독리단길 가봤니?</h1>
+    <img src="images/독리단길워크북.jpg" alt="독리단길 워크북 이미지">
+    <p>미니맵 내 QR코드를 클릭하여 장소별 정보를 확인해보세요!</p>
+  </div>
+
+</body>
+</html>
