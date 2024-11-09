@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>북촌문화센터</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .container img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .button-group {
+      margin-top: 20px;
+    }
+    .button-group .action-button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* 반응형 웹 */
+    @media (max-width: 600px) {
+      .container h1 {
+        font-size: 24px;
+      }
+      .button-group .action-button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>북촌문화센터</h1>
+    <img src="images/bukchon.jpg" alt="북촌문화센터 이미지">
+    
+    <div class="button-group">
+      <button class="action-button" onclick="goBack()">뒤로 가기</button>
+      <button class="action-button" onclick="window.location.href='https://hanok.seoul.go.kr/front/kor/town/town01.do'">
+        공식 웹사이트 방문
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
